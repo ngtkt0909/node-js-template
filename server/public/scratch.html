@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Node.jsのテストページ</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/scratch.js"></script>
+	</head>
+	<body>
+		<form action="/api/upload" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Import</legend>
+			<input type="file" name="impFile" size="30">
+			<br><br>
+			<input type="submit" name="impFileSubmit">
+		</fieldset>
+		</form>
+
+		<form action="/api/upload_multi" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Import Multi</legend>
+			<input type="file" name="impFileMulti" size="30">
+			<input type="file" name="impFileMulti" size="30">
+			<br><br>
+			<input type="submit" name="impFileSubmitMulti">
+		</fieldset>
+		</form>
+
+		<fieldset>
+			<legend>Export</legend>
+			<input type="file" name="expFile" size="30">
+			<br><br>
+			<input type="submit" name="expFileSubmit">
+		</fieldset>
+
+		<input type="button" onClick='history.back();' value="戻る">
+	</body>
+</html>
